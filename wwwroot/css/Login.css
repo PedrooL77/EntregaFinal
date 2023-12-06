@@ -1,0 +1,25 @@
+﻿body {
+    text-align: center;
+}
+.caixa {
+    background-color: blanchedalmond;
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+    width: 20%;
+    margin-left: 40%;
+}
+.btn {
+    margin-top: 10%;
+    height: 40px;
+    width: 70px;
+    margin-left: 35%;
+    background-color: #F2C225;
+    color: white;
+}
+.Senha {
+    height: 3%;
+}
+h4{
+    margin-top: 5%;
+}

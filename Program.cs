@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using ProjetoFinal.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Contexto>
+    (options => options.UseSqlServer("Data Source=SP-1491032\\SQLSENAI;Initial Catalog = ProjetoFinalPedro;Integrated Security = True;TrustServerCertificate = True"));
 
 var app = builder.Build();
 
@@ -22,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Usuario}/{action=Login}");
 
 app.Run();

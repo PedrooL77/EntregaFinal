@@ -1,0 +1,44 @@
+﻿@model ProjetoFinal.Models.Usuario
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<link href="~/css/Login.css" rel="stylesheet" />
+
+
+
+<div class="tudo">
+    
+    <div class="caixa">
+        <h1>Login</h1>
+        <h4>Digite o nome e a senha para realizar o login.</h4>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="Senha">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="Login">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Entrar" class="btn btn-primary" />
+            </div>
+
+            <h3>@ViewBag.Mensagem</h3>
+            
+        </form>
+        
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

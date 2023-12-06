@@ -16,3 +16,42 @@ html {
 body {
   margin-bottom: 60px;
 }
+.menu {
+    background-color: #F2C225 !important;
+    height:10%;
+}
+.bemvindo{
+    margin-top:3%;
+}
+.logo{
+    margin-top: 3%;
+}
+.titulo{
+    margin-top:0.3%
+}
+criar{
+    width:20%;
+    height:10%;
+}
+.adicionarnovo {
+    display: flex;
+    margin-top: 3%;
+}
+.icone {
+    margin-top: 1%;
+    margin-left: 1%;
+}
+table{
+    margin-top: 2%;
+}
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+.btneditar {
+    margin-top: 3%;
+    color: #F2C225;
+}
+.voltar{
+    margin-top:2%;
+}

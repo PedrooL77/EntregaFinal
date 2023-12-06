@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjetoFinal.Models.TipoProduto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="adicionarnovo">
+    <div>
+        <h1>Tipo Produto</h1>
+    </div>
+    <div class="icone">
+        <p>
+            <a asp-action="Create"><img class="criar" src="~/img/adicionar.png" width="30px" height="30px" /></a>
+        </p>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoProdutoDescricao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProdutoDescricao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
