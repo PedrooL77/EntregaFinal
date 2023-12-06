@@ -6,8 +6,12 @@
     border: 1px solid;
     border-color: black;
     text-align: center;
+    margin-top: 10%;
     width: 20%;
     margin-left: 40%;
+}
+.tudo{
+    margin-top:10%;
 }
 .btn {
     margin-top: 10%;
